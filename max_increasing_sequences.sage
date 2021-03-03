@@ -11,13 +11,13 @@ def max_increasing_sequences1(perm):
     increasing sequence.
     
     EXAMPLES::
-    
-        sage: max_increasing_sequences1(Permutation([4,1,7,8,2,3,9,5,6]))
-        [[1,2,3,5,6]]
-        sage: max_increasing_sequences1(Permutation([7,3,4,5,9,2,8,1,6])
-        [[3,4,5,9], [3,4,5,8], [3,4,5,6]]
-    
-    '''
+
+            sage: Permutation([2,3,4,1]).longest_increasing_subsequences()
+            [[2, 3, 4]]
+            sage: Permutation([5, 7, 1, 2, 6, 4, 3]).longest_increasing_subsequences()
+            [[1, 2, 6], [1, 2, 4], [1, 2, 3]]
+        """
+
     
     
     def is_subsequence_of(seq1, perm):
