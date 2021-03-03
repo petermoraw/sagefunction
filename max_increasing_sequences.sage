@@ -20,15 +20,14 @@ def longest_increasing_subsequences(self):
 
     
     
-    def is_subsequence_of(seq1, self):
+    def is_subsequence_of(seq, self):
         r"""
-        Returns whether seq1 is a subsequence of permutation `self`
+        Returns whether seq1 is a subsequence of permutation ``self``
         """
         
         j = 0
-        seq2 = []
-        while j<len(seq1)-1:
-            if self.index(seq1[j]) < self.index(seq1[j+1]):
+        while j < len(seq)-1:
+            if self.index(seq[j]) < self.index(seq[j+1]):
                 j = j+1
             else:
                 return False
