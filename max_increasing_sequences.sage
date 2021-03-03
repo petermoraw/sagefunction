@@ -33,8 +33,7 @@ def max_increasing_sequences1(perm):
     column = []
     for i in range(n):
         inserted = False
-        j = 0
-        #  j is j-th column of p-tableau
+        j = 0  # j is j-th column of p-tableau
         while j < len(first_row_p_tableau) and not inserted:
             if first_row_p_tableau[j] > perm[i]:
                 first_row_p_tableau[j] = perm[i]
@@ -44,12 +43,14 @@ def max_increasing_sequences1(perm):
         if not inserted:
             first_row_p_tableau.append(perm[i])
             column.append(j)
-    s = [[] for i in range(len(first_row_p_tableau)]
-    #  entry i is list of elements added to i-th column of p-tableau
+            
+    # getting the sets for columns
+    s = [[] for i in range(len(first_row_p_tableau))]
     for i in range(n):
         s[column[i]].append(perm[i])
     increasing_sequences = []
     
+    # getting the increasing sequences
     import itertools
     potential_sequences = list(itertools.product(*s))
     for seq in potential_sequences:
