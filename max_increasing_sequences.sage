@@ -1,5 +1,5 @@
 def max_increasing_sequences1(perm):
-    r'''
+    r"""
     Return the list of the longest increasing subsequences of ``perm``
     
     A theorem of Schensted ([ADD IN REFERENCES]) states that an
@@ -16,7 +16,7 @@ def max_increasing_sequences1(perm):
             [[2, 3, 4]]
             sage: Permutation([5, 7, 1, 2, 6, 4, 3]).longest_increasing_subsequences()
             [[1, 2, 6], [1, 2, 4], [1, 2, 3]]
-        """
+    """
 
     
     
