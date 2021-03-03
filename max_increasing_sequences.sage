@@ -10,7 +10,6 @@ def max_increasing_sequences1(perm):
     The algorithm then checks if the combination is an increasing
     sequence.
     
-A theorem of Schensted ([ADD IN REFERENCES]) states that an increasing s
     
     EXAMPLES::
 
