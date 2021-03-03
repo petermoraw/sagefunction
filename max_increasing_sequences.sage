@@ -12,7 +12,7 @@ def max_increasing_sequences1(perm):
     '''
     
     
-    def is_subsequence_of(seq1,perm):
+    def is_subsequence_of(seq1, perm):
         r"""
         Returns whether seq1 is a subsequence of permutation perm
         """
@@ -56,7 +56,7 @@ def max_increasing_sequences1(perm):
     potential_sequences = list(itertools.product(*s))
     for seq in potential_sequences:
         seq = list(seq)
-        if seq == sorted(seq) and is_subsequence_of(seq,perm):
+        if seq == sorted(seq) and is_subsequence_of(seq, perm):
             increasing_sequences.append(seq)
     return increasing_sequences
 
