@@ -2,6 +2,14 @@ def max_increasing_sequences1(perm):
     r'''
     Return the list of the longest increasing subsequences of ``perm``
     
+    A theorem of Schensted ([ADD IN REFERENCES]) states that an
+    increasing subsequence of length `i` ends with the value entered in
+    the `i`-th column of the p-tableau. The algorithm records which
+    column of the p-tableau each value of the permutation is entered
+    into, and computes all possible combinations of one entry from each
+    column. The algorithm then checks if the combination is an
+    increasing sequence.
+    
     EXAMPLES::
     
         sage: max_increasing_sequences1(Permutation([4,1,7,8,2,3,9,5,6]))
