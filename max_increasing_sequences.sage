@@ -29,12 +29,12 @@ def max_increasing_sequences1(perm):
 
     n = perm.size()
     
-    lmax = perm.longest_increasing_subsequence_length()
     first_row_p_tableau = []
     column = []
     for i in range(n):
         inserted = False
         j = 0
+        #  j is j-th column of p-tableau
         while j < len(first_row_p_tableau) and not inserted:
             if first_row_p_tableau[j] > perm[i]:
                 first_row_p_tableau[j] = perm[i]
@@ -44,15 +44,16 @@ def max_increasing_sequences1(perm):
         if not inserted:
             first_row_p_tableau.append(perm[i])
             column.append(j)
-    stack = [[] for i in range(lmax)]
+    s = [[] for i in range(len(first_row_p_tableau)]
+    #  entry i is list of elements added to i-th column of p-tableau
     for i in range(n):
-        stack[column[i]].append(perm[i])
+        s[column[i]].append(perm[i])
     increasing_sequences = []
     
     import itertools
-    potential_sequences = list(itertools.product(*stack))
+    potential_sequences = list(itertools.product(*s))
     for seq in potential_sequences:
-        seq = list(seq) 
+        seq = list(seq)
         if seq == sorted(seq) and is_subsequence_of(seq,perm):
             increasing_sequences.append(seq)
     return increasing_sequences
