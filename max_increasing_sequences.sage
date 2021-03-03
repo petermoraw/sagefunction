@@ -10,7 +10,6 @@ def max_increasing_sequences1(perm):
     The algorithm then checks if the combination is an increasing
     sequence.
     
-    
     EXAMPLES::
 
             sage: Permutation([2,3,4,1]).longest_increasing_subsequences()
