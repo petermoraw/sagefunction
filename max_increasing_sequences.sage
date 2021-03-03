@@ -29,6 +29,7 @@ def max_increasing_sequences1(perm):
 
     n = perm.size()
     
+    # getting the column in which each element is inserted
     first_row_p_tableau = []
     column = []
     for i in range(n):
